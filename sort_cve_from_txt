@@ -1,0 +1,13 @@
+from collections import Counter
+
+# Ouvrir le fichier
+with open("cve.txt") as f:
+    # Compter les occurrences de chaque ligne et stocker dans un dictionnaire
+    counts = Counter(f.readlines())
+
+# Trier le dictionnaire par ordre décroissant
+sorted_counts = dict(sorted(counts.items(), key=lambda item: item[1], reverse=True))
+
+# Afficher les résultats
+for line, count in sorted_counts.items():
+    print(f"{count}: {line}")
