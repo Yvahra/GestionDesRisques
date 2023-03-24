@@ -5,3 +5,5 @@ Projet tableau de bord risques.pdf ==> notre rapport contenant notre démarche d
 Get_CVE_From_Json_Url.py ==> permet de récupérer les données JSON pour les afficher dans cve.txt
 
 sort_cve_from_txt ==> trie les CVE en fonction de leur taux d'apparition 
+
+Les autres scripts ont permis de générer les diagrammes présents dans le rapport
