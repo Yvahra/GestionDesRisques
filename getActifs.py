@@ -1,7 +1,6 @@
 FILE_PATH = 'Ressources/APT.json'
 RES_PATH = 'Ressources/APT_actifs.txt'
 PLOT1_PATH = 'Images/evol_nbAPT_sansUpdate.png'
-PLOT1_PATH = 'Images/nbAPTbyCountry.png'
 NB_JOUR_RECENT = 6*30
 
 
@@ -54,19 +53,5 @@ plt.ylabel('Nombre d\'APT sans update')
 plt.legend()
 plt.title("Nombre d\'APT sans update depuis plus de six mois")
 plt.savefig(PLOT1_PATH)
-
-plt.cla()
-
-plt.plot(cumule.keys(), cumule.values(), label="Évolution du nombre d'APT sans update depus au moins six mois.")
-plt.plot(cumule.keys(), [maxAPT for i in range(len(cumule.values()))], label="Maximum d'APT recensés")
-plt.xlabel('Date (6 dernier mois avant le '+dt.strftime(dt.today(), "%d/%m/%Y")+")")
-plt.xticks([1, len(cumule.keys())//4, len(cumule.keys())//2, 3*len(cumule.keys())//4, len(cumule.keys())-1])
-plt.ylabel('Nombre d\'APT sans update')
-plt.legend()
-plt.title("Nombre d\'APT sans update depuis plus de six mois")
-plt.savefig(PLOT2_PATH)
-
-
-
 
 print('Nombre d\'APT actifs récemment :',len(apt_actifs.keys()))
